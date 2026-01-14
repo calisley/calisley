@@ -1,13 +1,295 @@
 <!doctype html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Calvin Isley</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: 'Georgia', 'Times New Roman', 'Times', serif;
+        line-height: 1.5;
+        color: #333;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 1rem 1rem;
+        background-color: #fff;
+      }
+
+      h1 {
+        font-size: 2rem;
+        line-height: 1.15;
+        margin-bottom: 0.25rem;
+        color: #222;
+      }
+
+      h2 {
+        font-size: 1.5rem;
+        margin-top: 1.5rem;
+        margin-bottom: 0.75rem;
+        color: #222;
+        border-bottom: 2px solid #e0e0e0;
+        padding-bottom: 0.25rem;
+      }
+
+      h3 {
+        font-size: 1.2rem;
+        margin-top: 1rem;
+        margin-bottom: 0.25rem;
+      }
+
+      h3 a {
+        color: #0066cc;
+        text-decoration: none;
+      }
+
+      h3 a:hover {
+        text-decoration: underline;
+      }
+
+      p {
+        margin-bottom: 0.5rem;
+      }
+
+      .header {
+        margin-bottom: 1.5rem;
+        display: grid;
+        grid-template-columns: 160px 1fr;
+        align-items: center;
+        column-gap: 1.25rem;
+      }
+
+      .header-content {
+        min-width: 0;
+      }
+
+      .photo {
+        width: 160px;
+        height: 180px;
+        border-radius: 6px;
+        background-color: #e0e0e0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+      }
+
+      .photo img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+
+      .title {
+        font-size: 1.1rem;
+        color: #666;
+        margin-bottom: 0.25rem;
+      }
+
+      .title .cv-link {
+        color: #0066cc;
+        text-decoration: none;
+        margin-left: 0.5rem;
+      }
+
+      .title .cv-link:hover {
+        text-decoration: underline;
+      }
+
+      .bio {
+        margin-bottom: 1rem;
+        text-align: justify;
+      }
+
+      .contact {
+        margin-bottom: 0;
+        margin-top: 0.35rem;
+      }
+
+      .contact-icons {
+        display: flex;
+        gap: 0.85rem;
+        align-items: center;
+      }
+
+      .contact-icons a {
+        color: #666;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        transition: color 0.2s;
+      }
+
+      .contact-icons a:hover {
+        color: #0066cc;
+      }
+
+      .contact-icons svg {
+        width: 18px;
+        height: 18px;
+        fill: currentColor;
+      }
+
+      .paper-entry {
+        margin-bottom: 1rem;
+        padding-bottom: 0.75rem;
+        border-bottom: 1px solid #f0f0f0;
+      }
+
+      .paper-entry:last-child {
+        border-bottom: none;
+      }
+
+      .paper-number {
+        font-weight: normal;
+        color: #666;
+      }
+
+      .authors {
+        color: #555;
+        font-style: italic;
+        margin-bottom: 0.25rem;
+      }
+
+      .venue {
+        color: #666;
+        margin-bottom: 0.25rem;
+      }
+
+      .links {
+        margin-top: 0.25rem;
+      }
+
+      .links a {
+        color: #0066cc;
+        text-decoration: none;
+        margin-right: 1rem;
+      }
+
+      .links a:hover {
+        text-decoration: underline;
+      }
+
+      @media (max-width: 600px) {
+        body {
+          padding: 0.75rem 0.75rem;
+        }
+
+        h1 {
+          font-size: 1.75rem;
+        }
+
+        h2 {
+          font-size: 1.3rem;
+        }
+
+        .header {
+          grid-template-columns: 1fr;
+          justify-items: center;
+          text-align: center;
+          row-gap: 0.75rem;
+        }
+
+        .photo {
+          width: 100px;
+          height: 100px;
+        }
+      }
+    </style>
   </head>
   <body>
-    <h1>Calvin Isley</h1>
-    <p>PhD Student, Department, University</p>
-    <p><a href="mailto:you@uni.edu">you@uni.edu</a></p>
+    <div class="header">
+      <div class="photo"><img src="res/headshot.jpg" alt="Photo of Calvin Isley" /></div>
+      <div class="header-content">
+        <h1>Calvin Isley</h1>
+        <p class="title">PhD Student, Harvard Kennedy School of Government <a href="res/isley_cv.pdf" target="_blank" class="cv-link">[ CV ]</a></p>
+        <div class="contact">
+          <div class="contact-icons">
+            <a href="mailto:cisley@g.harvard.edu" aria-label="Email">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+              </svg>
+            </a>
+            <a href="https://github.com/calisley" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+              </svg>
+            </a>
+            <a href="https://scholar.google.com/citations?user=MTNRADwAAAAJ" target="_blank" rel="noopener noreferrer" aria-label="Google Scholar">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="bio">
+      <p>
+        Hi! I am a 2nd year Ph.D. student in Public Policy at Harvard Kennedy School of Government. My research centers on the empirical evaluation of AI systems used in educational and institutional decision-making contexts, with a focus on learning outcomes and access to opportunity. My current work includes evaluations of AI augmented learning and applications of machine learning to university admissions.
+        Before beginning my Ph.D., I earned my bachelor's degree at Washington University in St. Louis and worked as a research assistant at the Federal Reserve.
+      </p>
+    </div>
+
+    <div class="papers">
+      <h2>Research</h2>
+
+      <style>
+        /* Add CSS counter for automatic numbering */
+        .papers {
+          counter-reset: paper;
+        }
+        .paper-entry {
+          counter-increment: paper;
+        }
+        .paper-entry h3 .paper-number::before {
+          content: counter(paper) ". ";
+        }
+      </style>
+
+      <!-- Paper Entry Template - Copy this block to add new papers -->
+      <div class="paper-entry">
+        <h3><span class="paper-number"></span><a href="https://example.com/paper1" target="_blank" rel="noopener noreferrer">Assessing the Quality of AI-Generated Exams: A Large-Scale Field Study</a></h3>
+        <p class="authors">Calvin Isley, Joshua Gilbert, Evangelos Kassos, Michaela Kocher, Allen Nie, Emma Brunskill, Ben Domingue, Jake Hofman, Joscha Legewie, Teddy Svoronos, Charlotte Tuminelli, Sharad Goel</p>
+        <p class="venue">Proceedings of the AAAI Conference on Artificial Intelligence, <b>forthcoming.</b>, 2026</p>
+        <p class="links">
+          <a href="res/papers/ai_exams_aaai.pdf" target="_blank">PDF</a>
+          <a href="https://github.com/calisley/ai_exams" target="_blank" rel="noopener noreferrer">Code</a>
+          <a href="https://www.arxiv.org/abs/2508.08314" target="_blank" rel="noopener noreferrer">arXiv</a>
+        </p>
+      </div>
+
+      <!-- Paper Entry Template - Copy this block to add new papers -->
+      <div class="paper-entry">
+        <h3><span class="paper-number"></span><a href="https://example.com/paper2" target="_blank" rel="noopener noreferrer">Money market fund repo and the ON RRP facility</a></h3>
+        <p class="authors">Samuel J Hempel, Calvin Isley, R Jay Kahn, Patrick E McCabe</p>
+        <p class="venue">FEDS Notes, 2023</p>
+        <p class="links">
+          <a href="https://www.federalreserve.gov/econres/notes/feds-notes/money-market-fund-repo-and-the-on-rrp-facility-20231215.html" target="_blank" rel="noopener noreferrer">URL</a>
+        </p>
+      </div>
+
+      <!-- 
+      To add a new paper, copy the block below and update the content:
+
+      <div class="paper-entry">
+        <h3><span class="paper-number"></span><a href="[paper-url]" target="_blank" rel="noopener noreferrer">Paper Title</a></h3>
+        <p class="authors">Author 1, Author 2, Calvin Isley</p>
+        <p class="venue">Conference/Journal Name, Year</p>
+        <p class="links">
+          <a href="[pdf-url]" target="_blank">PDF</a>
+          <a href="[code-url]" target="_blank" rel="noopener noreferrer">Code</a>
+          <a href="[arxiv-url]" target="_blank" rel="noopener noreferrer">arXiv</a>
+        </p>
+      </div>
+      -->
+    </div>
   </body>
 </html>
