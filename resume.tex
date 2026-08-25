@@ -21,6 +21,18 @@
 
 \newcommand{\entrysep}{\vspace{4pt}}
 
+% Conference header: use full name if it fits with venue/date on one line; else short name
+\newcommand{\preshead}[3]{%
+  \par\noindent
+  \settowidth{\dimen0}{\textbf{#1}\hspace{1.5em}#3}%
+  \ifdim\dimen0>\linewidth
+    \textbf{#2} \hfill #3%
+  \else
+    \textbf{#1} \hfill #3%
+  \fi
+  \par
+}
+
 \begin{document}
 \pagestyle{empty}
 
@@ -111,7 +123,7 @@
 %--- SELECTED PRESENTATIONS ---
 \section*{Selected Presentations}
 {\small
-\textbf{INFORMS Conference on Information Systems and Technology (CIST)} \hfill San Francisco, CA \hfill \textit{October 2026}
+\preshead{INFORMS Conference on Information Systems and Technology (CIST)}{INFORMS CIST}{San Francisco, CA, October 2026}
 \begin{itemize}[leftmargin=2.2em, topsep=2pt, itemsep=1pt, parsep=0pt]
   \item ``Mitigating Label Bias with Interpretable Rubric Embeddings''
   \item ``AI Use in Graduate Applications is Common but Penalized''
@@ -119,7 +131,7 @@
 
 \entrysep
 
-\textbf{ACM Conference on Equity and Access in Algorithms, Mechanisms, and Optimization} \hfill Munich, Germany \hfill \textit{November 2026}
+\preshead{ACM Conference on Equity and Access in Algorithms, Mechanisms, and Optimization (EAAMO)}{ACM EAAMO}{Munich, Germany, November 2026}
 \begin{itemize}[leftmargin=2.2em, topsep=2pt, itemsep=1pt, parsep=0pt]
   \item ``Mitigating Label Bias with Interpretable Rubric Embeddings'' (Oral)
   \item ``AI Use in Graduate Applications is Common but Penalized'' (Oral)
@@ -127,14 +139,14 @@
 
 \entrysep
 
-\textbf{International Conference on Computational Social Science (IC2S2)} \hfill Burlington, VT \hfill \textit{2026}
+\preshead{International Conference on Computational Social Science (IC2S2)}{IC2S2}{Burlington, VT, July 2026}
 \begin{itemize}[leftmargin=2.2em, topsep=2pt, itemsep=1pt, parsep=0pt]
   \item ``AI Use in Graduate Applications is Common but Penalized'' (Parallel talk)
 \end{itemize}
 
 \entrysep
 
-\textbf{TeachECONference} \hfill Online \hfill \textit{June 2026}
+\preshead{TeachECONference}{TeachECONference}{Online, June 2026}
 \begin{itemize}[leftmargin=2.2em, topsep=2pt, itemsep=1pt, parsep=0pt]
   \item ``Evidence on the Quality of Verbal and Written AI-Generated Assessments'' (Invited talk)
 \end{itemize}
